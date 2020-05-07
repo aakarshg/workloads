@@ -35,3 +35,4 @@ prometheus_concurrency: "{{ lookup('env', 'PROMETHEUS_CONCURRENCY')|default(10, 
 prometheus_duration: "{{ lookup('env', 'PROMETHEUS_DURATION')|default(9000, true)|int }}"
 prometheus_graph_period: "{{ lookup('env', 'PROMETHEUS_GRAPH_PERIOD')|default(15, true)|int }}"
 prometheus_refresh_interval: "{{ lookup('env', 'PROMETHEUS_REFRESH_INTERVAL')|default(20, true)|int }}"
+pprof_collect: "{{ lookup('env', 'PPROF_COLLECT')|default(false, true)|bool|lower }}"
